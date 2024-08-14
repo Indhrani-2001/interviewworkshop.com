@@ -1,0 +1,210 @@
+/* body{
+    background-color: wheat;
+}
+#outer-container{
+    border: 30px solid purple;
+    height: 530px;
+    width: 1275px;
+    margin-left: 15px;
+    margin-top: 15px;
+   background-color: wheat;
+    background-size: 1280px;
+    border-radius: 2rem;
+    display: flex;
+}
+#inner-container{
+    border: 0px solid black;
+    padding: 100px;
+    margin-left: 150px;
+    margin-top: 20px;
+    width: 250px;
+    height: 280px;
+    border-radius: 2rem;
+   background-color: white;
+}
+#submit{
+    text-align: center;
+    margin-left: 90px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 7px;
+    border: none;
+}
+#holder{
+    font-size: 20px; 
+}
+h1{
+    margin-left: 50px;
+}
+#button{
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid none;
+    color: white;
+    margin-left: 190px;
+    background-color: blue;
+    border-radius: 2rem;
+}
+span{
+    font-size: 40px;
+    margin-top: 230px;
+    text-align: center;
+    margin-left: 100px;
+} */
+body {
+    background-color: wheat;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+#outer-container {
+    border: 30px solid purple;
+    width: 90%; /* Make width responsive */
+    max-width: 1275px; /* Maximum width for larger screens */
+    margin: 15px auto; /* Center container horizontally */
+    background-color: wheat;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack inner elements vertically */
+    align-items: center; /* Center items horizontally */
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+#inner-container {
+    border: 0px solid black;
+    padding: 20px; /* Reduced padding for better responsiveness */
+    margin: 20px; /* Margin adjusted for responsive layout */
+    width: 90%; /* Responsive width */
+    max-width: 250px; /* Maximum width */
+    height: auto; /* Height adjusts based on content */
+    border-radius: 2rem;
+    background-color: white;
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+#video {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#video.enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#submitted-message {
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+a{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: purple;
+    padding: 7px;
+    border: none;
+    margin-top: 10px; /* Margin adjusted for responsiveness */
+    display: block; /* Ensure the button takes its own line */
+    width: 100%; /* Full width button for small screens */
+    text-decoration: none;
+}
+#holder {
+    font-size: 20px;
+    margin: 20px 0; /* Responsive margin */
+    width: 200px;
+    margin-top: -100px;
+}
+
+#msg {
+    margin: 20px 0; /* Adjust margins for responsiveness */
+    font-size: 2em; /* Responsive font size */
+}
+
+#button {
+    width: 100%; /* Full width button */
+    max-width: 100px; /* Maximum width */
+    height: auto; /* Height adjusts based on content */
+    padding: 10px; /* Adjust padding for better appearance */
+    font-size: 1em; /* Responsive font size */
+    border: none;
+    color: white;
+    background-color:purple;
+    border-radius: 2rem;
+    display: block; /* Ensure the button takes its own line */
+    margin: 20px auto; /* Center button horizontally with margin */
+    margin-top: 30px;
+    text-decoration: none;
+}
+#sub{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: purple;
+    padding: 7px;
+    border: none;
+    margin-top: 10px; /* Margin adjusted for responsiveness */
+    display: block; /* Ensure the button takes its own line */
+    width: 100%; /* Full width button for small screens */
+}
+#myForm {
+    margin: auto;
+    width: fit-content;
+}
+#submitted-message {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Font size */
+    text-align: center; /* Center text */
+    margin-top: 20px;
+}
+
+span {
+    font-size: 2em; /* Responsive font size */
+    text-align: center;
+    display: block; /* Ensure span takes its own line */
+    margin: 20px auto; /* Center span horizontally with margin */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #outer-container {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    #inner-container {
+        width: 100%; /* Full width container on small screens */
+        padding: 10px; /* Reduced padding */
+    }
+
+    #submit, #button {
+        width: 100%; /* Full width buttons on small screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    span {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further reduce font size for very small screens */
+    }
+
+    span {
+        font-size: 1.2em; /* Further reduce font size for very small screens */
+    }
+
+    #inner-container {
+        padding: 5px; /* Further reduce padding */
+    }
+}

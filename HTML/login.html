@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <div id="outer-container">
+        <div id="inner-container">
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Go In</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get values from the form
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Obfuscated credentials (not secure)
+            var encodedEmail = 'bHVja2lpaTY0NjVAZ21haWwuY29t'; 
+            var encodedPassword = 'a2V2YWJ1c2kxNDM='; 
+
+            var validEmail = atob(encodedEmail); // Decode base64
+            var validPassword = atob(encodedPassword); // Decode base64
+
+            // Debugging information
+            console.log('Email:', email);
+            console.log('Password:', password);
+            console.log('Valid Email:', validEmail);
+            console.log('Valid Password:', validPassword);
+
+            // Check credentials
+            if (email === validEmail && password === validPassword) {
+                // Redirect to the specified page
+                window.location.href = 'download.html';
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
