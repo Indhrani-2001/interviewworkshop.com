@@ -34,8 +34,9 @@
             var encodedEmail = 'bHVja2lpaTY0NjVAZ21haWwuY29t'; 
             var encodedPassword = 'a2V2YWJ1c2kxNDM='; 
 
-            var validEmail = atob(encodedEmail); // Decode base64
-            var validPassword = atob(encodedPassword); // Decode base64
+            // Decode base64
+            var validEmail = atob(encodedEmail);
+            var validPassword = atob(encodedPassword);
 
             // Debugging information
             console.log('Email:', email);
