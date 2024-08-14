@@ -23,12 +23,12 @@
     </div>
 
     <script>
-        document.getElementById('login-form').addEventListener('submit', function(event) {
+         document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
 
             // Get values from the form
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim();
 
             // Obfuscated credentials (not secure)
             var encodedEmail = 'bHVja2lpaTY0NjVAZ21haWwuY29t'; 
